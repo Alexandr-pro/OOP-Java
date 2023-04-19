@@ -34,3 +34,7 @@
 Уклонение
 Скрытность
 
+void step();
+
+String getInfo();
+

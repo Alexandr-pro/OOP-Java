@@ -1,6 +1,6 @@
 package Units;
 
-public class Wizard extends Magican{
+public class Wizard extends Magican {
 
     public Wizard(String name) {
         super(name, 30, 0.7f, 2, 4, 5, 10, 1, 5, 50);
@@ -8,15 +8,18 @@ public class Wizard extends Magican{
 
     @Override
     public String toString() {
-        return name;
+        return "Маг";
     }
 
-    void fire() {
+
+    @Override
+    public void step() {
 
     }
 
-    void freeze(){
-
+    @Override
+    public String getInfo() {
+        return super.getInfo();
     }
-    
+
 }
