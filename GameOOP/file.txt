@@ -38,3 +38,5 @@ void step();
 
 String getInfo();
 
+инициатива
+

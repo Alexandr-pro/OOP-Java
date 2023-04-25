@@ -1,8 +1,10 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Peasant extends Unit {
-    public Peasant(String name) {
-        super(name, 10, 0.5f, 1, 1, 0);
+    public Peasant(String name, ArrayList<Unit> team) {
+        super(name, 10, 0.5f, 1, 1, 0, team);
     }
 
     @Override
@@ -10,10 +12,6 @@ public class Peasant extends Unit {
         return "Крестьянин";
     }
 
-    @Override
-    public void step() {
-
-    }
 
     @Override
     public String getInfo() {
