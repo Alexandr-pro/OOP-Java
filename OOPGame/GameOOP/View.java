@@ -27,14 +27,14 @@ public class View {
     }
     private static String getChar(int x, int y){
         String out = "| ";
-        for (Unit human: Main.team3) {
+        for (Unit human: main.team3) {
             if (human.getCoords()[0] == x && human.getCoords()[1] == y){
                 if (human.getHp() == 0) {
                     out = "|" + (AnsiColors.ANSI_RED + human.toString().charAt(0) + AnsiColors.ANSI_RESET);
                     break;
                 }
-                if (Main.team2.contains(human)) out = "|" + (AnsiColors.ANSI_GREEN + human.toString().charAt(0) + AnsiColors.ANSI_RESET);
-                if (Main.team1.contains(human)) out = "|" + (AnsiColors.ANSI_BLUE + human.toString().charAt(0) + AnsiColors.ANSI_RESET);
+                if (main.team2.contains(human)) out = "|" + (AnsiColors.ANSI_GREEN + human.toString().charAt(0) + AnsiColors.ANSI_RESET);
+                if (main.team1.contains(human)) out = "|" + (AnsiColors.ANSI_BLUE + human.toString().charAt(0) + AnsiColors.ANSI_RESET);
                 break;
             }
         }
@@ -47,7 +47,7 @@ public class View {
             System.out.print(AnsiColors.ANSI_RED + "Step:" + step + AnsiColors.ANSI_RESET);
         }
         step++;
-        Main.team3.forEach((v) -> l[0] = Math.max(l[0], v.getInfo().length()));
+        main.team3.forEach((v) -> l[0] = Math.max(l[0], v.getInfo().length()));
         System.out.print("_".repeat(l[0]*2));
         System.out.println("");
         System.out.print(top10 + "    ");
@@ -59,9 +59,9 @@ public class View {
             System.out.print(getChar(1, i));
         }
         System.out.print("|    ");
-        System.out.print(Main.team1.get(0).getInfo());
-        tabSetter(Main.team1.get(0).getInfo().length(), l[0]);
-        System.out.println(Main.team2.get(0).getInfo());
+        System.out.print(main.team1.get(0).getInfo());
+        tabSetter(main.team1.get(0).getInfo().length(), l[0]);
+        System.out.println(main.team2.get(0).getInfo());
         System.out.println(midl10);
 
         for (int i = 2; i < 10; i++) {
@@ -69,18 +69,18 @@ public class View {
                 System.out.print(getChar(i, j));
             }
             System.out.print("|    ");
-            System.out.print(Main.team1.get(i-1).getInfo());
-            tabSetter(Main.team1.get(i-1).getInfo().length(), l[0]);
-            System.out.println(Main.team2.get(i-1).getInfo());
+            System.out.print(main.team1.get(i-1).getInfo());
+            tabSetter(main.team1.get(i-1).getInfo().length(), l[0]);
+            System.out.println(main.team2.get(i-1).getInfo());
             System.out.println(midl10);
         }
         for (int j = 1; j < 11; j++) {
             System.out.print(getChar(10, j));
         }
         System.out.print("|    ");
-        System.out.print(Main.team1.get(9).getInfo());
-        tabSetter(Main.team1.get(9).getInfo().length(), l[0]);
-        System.out.println(Main.team2.get(9).getInfo());
+        System.out.print(main.team1.get(9).getInfo());
+        tabSetter(main.team1.get(9).getInfo().length(), l[0]);
+        System.out.println(main.team2.get(9).getInfo());
         System.out.println(bottom10);
     }
 }

@@ -14,7 +14,7 @@ import Units.Spearman;
 import Units.Thief;
 import Units.Unit;
 import Units.Wizard;
-public class Main {
+public class main {
 
     static public ArrayList<Unit> team1 = new ArrayList<>();
     static public ArrayList<Unit> team2 = new ArrayList<>();
